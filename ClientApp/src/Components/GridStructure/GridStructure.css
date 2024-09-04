@@ -1,0 +1,17 @@
+.grid-wrapper{
+    padding: 10px 10px 0px;
+    background-color: rgb(60, 84, 100)
+}
+.bttn1 {
+    font-size: 14px;
+    border: 1px solid #00abe6;
+    border-radius: 6px;
+    padding: 6px 18px;
+    background-color: #fff;
+    color: #2c2b7c;
+    cursor: pointer;
+    border: 1px solid #00abe6;
+}
+.p-10{
+    padding: 10px;
+}

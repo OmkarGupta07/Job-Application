@@ -84,6 +84,24 @@ const GetJobs=async (req,res)=>{
 console.log(error);    
 }  
 }
+const GetJobById=async (req,res)=>{
+  try {
+
+    const { id } = req.params;
+    
+    // Find the job by ID
+    const job = await JobModel.findById(id);
+    
+    if (!job) {
+      return res.status(404).json({ message: 'Job not found' });
+    }
+
+    res.status(200).json(job);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: 'Server error' });
+  }
+}
 
 
 
@@ -158,4 +176,4 @@ const MyJobs=async(req,res)=>{
 
 
 
-module.exports={RegisterUser,LoginUser,AddJobs,GetJobs,EditJobs,DeleteJobs,AppliedJobs,MyJobs}
+module.exports={GetJobById,RegisterUser,LoginUser,AddJobs,GetJobs,EditJobs,DeleteJobs,AppliedJobs,MyJobs}
