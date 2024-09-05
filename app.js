@@ -1,11 +1,15 @@
 const express=require('express')
 const app=express();
+const cors = require('cors');
 const MongoConnect=require('mongoose')
 
 const Cookies=require('cookie-parser')
 const router=require('./Routes/routes')
 app.use(express.json())
 app.use(Cookies());
+app.use(cors({
+    origin: 'http://localhost:3000' // Allow requests from this origin
+  }));
 app.use('/api',router);
 
 

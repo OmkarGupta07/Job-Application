@@ -1,6 +1,6 @@
 const express=require('express')
 const router=express.Router();
-const {RegisterUser,LoginUser,AddJobs,GetJobs,EditJobs,DeleteJobs,AppliedJobs,MyJobs} = require('../Controller/Logics')
+const {RegisterUser,LoginUser,AddJobs,GetJobs,EditJobs,DeleteJobs,AppliedJobs,MyJobs,GetJobById} = require('../Controller/Logics')
 router.use(express.json());
 
 router.post('/users/login',LoginUser)
@@ -14,6 +14,7 @@ router.get('/MyJobs',MyJobs);
 
 
 router.get('/JobList',GetJobs);
+router.get('/JobListId/:id',GetJobById)
 router.put('/JobList/:id',EditJobs);
 router.delete('/JobList/:id',DeleteJobs);
 

@@ -1,0 +1,28 @@
+.box-shdw {
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+  }
+
+
+.tabBtn {
+  width: 100%;
+  height: auto;
+}
+.tabBtn ul li {
+  display: inline-block;
+  margin-right: 5px;
+}
+.tabBtn ul li button {
+  font-size: 14px;
+  border: 1px solid #00abe6;
+  border-radius: 6px 6px 0 0;
+  padding: 6px 18px;
+  background-color: #fff;
+  color: #667c2b;
+  cursor: pointer;
+  border: 1px solid #00abe6;
+}
+
+.tabBtn ul li button.active {
+  background-color: #2c2b7c;
+  color: white;
+}
